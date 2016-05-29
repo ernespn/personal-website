@@ -13,6 +13,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/custom.css">
     <!-- endbuild -->
   </head>
   <body ng-app="websiteApp">
@@ -35,13 +36,23 @@
 
             <a class="navbar-brand" href="#/">website</a>
           </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                    
+            <!---
+          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="HeaderController">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li ng-class="{active: isActive('/')}"><a href="#/">Home</a></li>
+              <li ng-class="{active: isActive('/about')}"><a ng-href="#/about">About</a></li>
+              <li ng-class="{active: isActive('/todo')}"><a ng-href="#/todo">Example Todo</a></li>
+              <li ng-class="{active: isActive('/')}"><a ng-href="#/">Contact</a></li>
+            </ul>
+          </div>
+            --->
+            
+             <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="NavigationCtrl">
+
+            <ul class="nav navbar-nav">
+              <li ng-repeat ="menu in menus" ng-class="{active: isActive(menu)}"><a href="#{{menu.path}}">{{menu.title}}</a></li>
             </ul>
           </div>
         </div>
@@ -81,6 +92,8 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-ui-sortable/sortable.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -88,6 +101,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/todoexample.js"></script>
+        <script src="scripts/controllers/navigation.js"></script>
         <!-- endbuild -->
 </body>
 </html>
