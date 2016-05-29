@@ -24,16 +24,19 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main',
+        controllerTitle: 'Home'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about',
+        controllerTitle : 'About'
       })
       .when('/todo', {
         templateUrl: 'views/todoexample.html',
         controller: 'TodoexampleCtrl',
         controllerAs: 'todoexample',
+        controllerTitle: 'TODO example'
       })
       .otherwise({
         redirectTo: '/'
