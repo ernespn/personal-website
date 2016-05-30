@@ -6,18 +6,27 @@ describe('Controller: NavigationCtrl', function () {
   beforeEach(module('websiteApp'));
 
   var NavigationCtrl,
-    scope;
+    scope, rootScope, location, route;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
+  beforeEach(inject(function ($location, $route, $controller, $rootScope) {
+    location = $location;
+    rootScope = $rootScope;
+    route = route;
     scope = $rootScope.$new();
-    NavigationCtrl = $controller('NavigationCtrl', {
-      $scope: scope
-      // place here mocked dependencies
-    });
+    NavigationCtrl = $controller('NavigationCtrl', { $scope: scope });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(NavigationCtrl.awesomeThings.length).toBe(3);
+  it('it should return true if the path of the menu is the same than the browser location',     function () {
+      var menu = {path: '/Path'} ;
+      spyOn(location, 'path').and.returnValue(menu.path);
+      expect(scope.isActive(menu)).toBe(true);
   });
+    
+    it('it should return alse if the path of the menu is the NOT same than the browser location',     function () {
+      var menu = {path: '/Path'} ;
+      spyOn(location, 'path').and.returnValue('/SomethingElse');
+      expect(scope.isActive(menu)).toBe(false);
+    });
+    
 });
