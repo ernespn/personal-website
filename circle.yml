@@ -1,0 +1,4 @@
+test:
+  override:
+    - grunt test:
+        pwd: test
