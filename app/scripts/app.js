@@ -24,22 +24,21 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main',
-        controllerTitle: 'Home'
+        projectName : 'Other'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about',
-        controllerTitle : 'About'
+        projectName : 'About'
       })
       .when('/todo', {
         templateUrl: 'views/todoexample.html',
         controller: 'TodoexampleCtrl',
         controllerAs: 'todoexample',
-        controllerTitle: 'TODO example'
+        projectName: 'Todos'
       })
       .otherwise({
         redirectTo: '/'
       });
   });
-

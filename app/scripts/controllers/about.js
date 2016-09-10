@@ -8,18 +8,11 @@
  * Controller of the websiteApp
  */
 angular.module('websiteApp')
-  .controller('AboutCtrl', function () {
+  .controller('AboutCtrl', function ($scope) {
+    $scope.greeting = "TEST";
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
   });
-
-
-function Hello($scope, $http) {
-    $http.get('/api/javascript/greeting').
-        success(function(data) {
-            $scope.greeting = data;
-        });
-}
