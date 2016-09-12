@@ -2,5 +2,5 @@
 
 angular.module('websiteApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.container = "main";
+    $scope.container = 'main';
   });

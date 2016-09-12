@@ -9,7 +9,7 @@
  */
 angular.module('websiteApp')
   .controller('AboutCtrl', function ($scope) {
-    $scope.greeting = "TEST";
+    $scope.greeting = 'TEST';
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
