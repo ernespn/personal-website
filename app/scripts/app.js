@@ -26,11 +26,11 @@ angular
         controllerAs: 'main',
         projectName : 'Other'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about',
-        projectName : 'About'
+      .when('/microservices', {
+        templateUrl: 'views/microservices.html',
+        controller: 'MicroservicesCtrl',
+        controllerAs: 'microservices',
+        projectName : 'Microservices'
       })
       .when('/todo', {
         templateUrl: 'views/todoexample.html',

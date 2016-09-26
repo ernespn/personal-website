@@ -1,3 +1,9 @@
 .moveable {
     padding:5px 10px; cursor: move;
 }
+
+.result, .from {
+    color: #fff;
+    background: #18BC9C;
+}
+

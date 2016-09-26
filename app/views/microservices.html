@@ -1,0 +1,43 @@
+<div class="portfolio-modal modal fade" id="portfolioModal-Microservices" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="modal-body">
+                        <h2>Microservices with Load Balancing</h2>
+                        <hr class="star-primary">
+                        <img src="images/portfolio/safe.png" class="img-responsive img-centered" alt="">
+                        <p>In this example I have 5 services written in different technologies (Java, C#, F#, Javascript, Python). 
+                            Each microservices has the same contract are all of them are under the same load balancer. </p>
+                        <p>The angular application is making a call to the loadbalancer, binding to the view and showing the result.</p>
+                        <form ng-submit="submit()" class="form-inline">
+                            <div class="form-group">
+                                <label class="sr-only" for="number1">Number 1</label>
+                                <input type="text" class="form-control" id="number1" placeholder="Number 1" ng-model="num1">
+                            </div>
+                            +
+                            <div class="form-group">
+                                <label class="sr-only" for="number2">Number 2</label>
+                                <input type="text" class="form-control" id="number2" placeholder="Number 2" ng-model="num2">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calculate</button>
+                        </form>
+                        <p>
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-4 result" ng-model="result">Result : {{ result }}</div>
+                            <div class="col-md-3 col-md-offset-4 from" ng-model="from">From : {{ from }}</div>
+                        </div>
+                        </p>
+                        <button type="button" class="col-md-3 col-md-offset-4 btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
