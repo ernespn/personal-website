@@ -13,7 +13,7 @@ angular.module('websiteApp')
         var projects = [];
         angular.forEach($route.routes, function(route){
             if (typeof route.projectName !== 'undefined'){
-                projects.push({path: route.originalPath, name: route.projectName});
+                projects.push({path: route.originalPath, name: route.projectName, image: route.image});
             }
         });
         return projects;

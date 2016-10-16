@@ -24,19 +24,22 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main',
-        projectName : 'Other'
+        projectName : 'Other',
+        image: 'images/portfolio/Other.png'
       })
       .when('/microservices', {
         templateUrl: 'views/microservices.html',
         controller: 'MicroservicesCtrl',
         controllerAs: 'microservices',
-        projectName : 'Microservices'
+        projectName : 'Microservices',
+        image: 'images/portfolio/Microservices.png'
       })
       .when('/todo', {
         templateUrl: 'views/todoexample.html',
         controller: 'TodoexampleCtrl',
         controllerAs: 'todoexample',
-        projectName: 'Todos'
+        projectName: 'Todos',
+        image: 'images/portfolio/Todos.png'
       })
       .otherwise({
         redirectTo: '/'
