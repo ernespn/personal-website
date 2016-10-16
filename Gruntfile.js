@@ -380,7 +380,10 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'js/**',
+            'styles/**',
+            'images/**', 
           ]
         }, {
           expand: true,
@@ -389,8 +392,15 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }, {
           expand: true,
+          dot: true,
+          cwd: 'bower_components/font-awesome',
+          src: ['fonts/*.*'],
+          dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          dot: true,
           cwd: 'bower_components/bootstrap/dist',
-          src: 'fonts/*',
+          src: ['fonts/*.*'],
           dest: '<%= yeoman.dist %>'
         }]
       },
