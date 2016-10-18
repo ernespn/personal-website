@@ -20,13 +20,13 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main',
-        projectName : 'Other',
-        image: 'images/portfolio/Other.png'
-      })
+      // .when('/', {
+      //   templateUrl: 'views/main.html',
+      //   controller: 'MainCtrl',
+      //   controllerAs: 'main',
+      //   projectName : 'Other',
+      //   image: 'images/portfolio/Other.png'
+      // })
       .when('/microservices', {
         templateUrl: 'views/microservices.html',
         controller: 'MicroservicesCtrl',
@@ -40,8 +40,5 @@ angular
         controllerAs: 'todoexample',
         projectName: 'Todos',
         image: 'images/portfolio/Todos.png'
-      })
-      .otherwise({
-        redirectTo: '/'
       });
   });
