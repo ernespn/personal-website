@@ -40,6 +40,7 @@ RUN     GIT_DIR=/tmp bower install --allow-root --silent
 RUN     GIT_DIR=/tmp grunt build
 # Copy to NGINX
 RUN     cp -ar dist/* /usr/share/nginx/html/
+RUN		cp default.conf /etc/nginx/conf.d/
 
 #Running NGINX
 EXPOSE 9000
