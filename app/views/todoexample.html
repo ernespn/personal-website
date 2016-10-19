@@ -2,9 +2,12 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
-                <h2>My ToDoS {{container}}!</h2>
+                <h2>Todo with MongoDB</h2>
                 <hr class="star-primary">
-
+                <img src="images/portfolio/safe.png" class="img-responsive img-centered" alt="">
+                <p>In this example we will be saving simple TODO task into MongoDB.</p>
+                <p>The backend is done in C# and Java spring. The contract is similar so they should be interchangeable or even load balanced.</p>
+                <p>The front end made in Angular will do a rest request to those services to get the information about the data stored.</p>
                 <!-- Todos input -->
                 <form role="form" ng-submit="addTodo()">
                     <div class ="row">
@@ -16,8 +19,6 @@
                         </div>
                     </div>
                 </form>
-
-
                 <!-- Todos list -->
                 <div ui-sortable ng-model="todos">
                     <p class="input-group moveable" ng-repeat="todo in todos">
@@ -27,6 +28,12 @@
                         </span>
                     </p>
                 </div>
+                <h4>Let's play with it: </h4>
+                <p>There are 3 operations we are interested on; Get all the todos, add new todos and delete todos.</p>
+                <p>By default every operations we will bring the list of todos, so if nothings come up is because there is nothing in the database.</p>
+                <p>This is done with GET request.</p>
+                <p>To insert new todos we do a POST request.</p>
+                <p>To delete todos we do a DELETE request</p>
             </div>
         </div>
     </div>

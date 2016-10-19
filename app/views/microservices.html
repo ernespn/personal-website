@@ -27,6 +27,13 @@
                     <div class="col-md-3 col-md-offset-4 from" ng-model="from">From : {{ from }}</div>
                 </div>
                 </p>
+                <h4>Let's play with it: </h4>
+                <p>The Load balancer NGINX will retry a failing request to any server.</p>
+                <p>To test this will be shuting down one of the instances and see how the request never is missing.</p>
+                <p>Go to docker terminal and run "docker stop fullstacj_node3_1"</p>
+                <p>And try again but this time look at the request. You wont find any 500 errors in the requests</p>
+                <p>Let's check a bit closer. Let's see the logs in the load balancer with "docker logs  fullstacj_nginx_1".</p>
+                <p> You can find that when a request fail, it triggers automatically another one.</p>                                                       
             </div>
         </div>
     </div>
