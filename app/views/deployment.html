@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="modal-body">
+                <h2>Deployment with Docker</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+    </div>    
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="images/portfolio/github.png" class="img-responsive img-centered" alt="github">
+        </div> 
+        <div class="col-sm-3 ">   
+            <img src="images/portfolio/circleci.png" class="img-responsive img-centered" alt="circle ci">
+        </div>
+        <div class="col-sm-3 ">
+            <img src="images/portfolio/dockerhub.png" class="img-responsive img-centered" alt="docker cloud">
+        </div>      
+        <div class="col-sm-3 ">
+            <img src="images/portfolio/digitalocean.png" class="img-responsive img-centered" alt="digital ocean">
+        </div>           
+        
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>This is the workflow that some applications follow from when a developer push a small change into the repository to when the application reaches production.</p>
+            <p>In fact. This website was deployed using it.</p>
+            <p>First we need to contanerise all the applications we want with docker. <img src="images/portfolio/docker.png" class="img-responsive img-centered" alt="docker"> </p>
+            <p>With docker we can create images of our servers with our code shipped ready to be deployed. In this case a bunch of microservices, a front end website made in angular and bootstrap, a load balancer and even a mongoDB database</p>
+            <p>Once that is done, we need link them all toguether using docker-compose file. That will show you how the infrastructure looks like. Then we can have all our infrastructure deployed with a few commands in whatever server we want (that has docker installed).</p>
+            <p>But not everything is about deployment, you want to deploy quality images, right? Running your tests automatically and if they all pass we promote automatically that image to our image registry so it can be deployed at any time. <img src="images/portfolio/circleci.png" class="img-responsive img-centered" alt="circleci"></p>
+            <p>We use Circle CI for continuous integration which is connected to github, it detects every push we do in the repositories, run all the tests and if everything is ok, it trigger a command to create the image.</p>
+            <p>Finally, once the image is available, we can push it to production with docker cloud, where we can manage our infrastructure, redeploying images on demand (or automatically) or the full stack if we want.
+                    <img src="images/portfolio/dockerhub.png" class="img-responsive img-centered" alt="docker cloud">
+            </p>
+            
+        </div>
+    </div>
+</div>

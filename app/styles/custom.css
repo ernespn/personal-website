@@ -73,3 +73,9 @@ hr.star-light:after {
   background-color: #709FB0;
   color: white;
 }
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}

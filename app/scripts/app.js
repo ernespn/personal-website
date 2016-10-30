@@ -20,12 +20,12 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/main', {
-         templateUrl: 'views/main.html',
-         controller: 'MainCtrl',
-         controllerAs: 'main',
-         projectName : 'Other',
-         image: 'images/portfolio/Other.png'
+      .when('/deployment', {
+         templateUrl: 'views/deployment.html',
+         controller: 'DeploymentCtrl',
+         controllerAs: 'deployments',
+         projectName : 'Deployment',
+         image: 'images/portfolio/Deployment.png'
        })
 
       .when('/microservices', {
