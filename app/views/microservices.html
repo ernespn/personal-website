@@ -5,36 +5,65 @@
             <div class="modal-body">
                 <h2>Microservices with Load Balancing</h2>
                 <hr class="star-primary">
-                <img src="images/portfolio/Microservices.png" class="img-responsive img-centered" alt="">
-                <p>In this example I have 5 services written in different technologies (Java, C#, F#, Javascript, Python). 
-                    Each microservices has the same contract are all of them are under the same load balancer. </p>
-                <p>The angular application is making a call to the loadbalancer, binding to the view and showing the result.</p>
-                <form ng-submit="submit()" class="form-inline">
-                    <div class="form-group">
-                        <label class="sr-only" for="number1">Number 1</label>
-                        <input type="text" class="form-control" id="number1" placeholder="Number 1" ng-model="num1">
-                    </div>
-                    +
-                    <div class="form-group">
-                        <label class="sr-only" for="number2">Number 2</label>
-                        <input type="text" class="form-control" id="number2" placeholder="Number 2" ng-model="num2">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Calculate</button>
-                </form>
-                <p>
-                <div class="row">
-                    <div class="col-md-3 col-md-offset-4 result" ng-model="result">Result : {{ result }}</div>
-                    <div class="col-md-3 col-md-offset-4 from" ng-model="from">From : {{ from }}</div>
-                </div>
-                </p>
-                <h4>Let's play with it: </h4>
-                <p>The Load balancer NGINX will retry a failing request to any server.</p>
-                <p>To test this will be shuting down one of the instances and see how the request never is missing.</p>
-                <p>Go to docker terminal and run "docker stop fullstacj_node3_1"</p>
-                <p>And try again but this time look at the request. You wont find any 500 errors in the requests</p>
-                <p>Let's check a bit closer. Let's see the logs in the load balancer with "docker logs  fullstacj_nginx_1".</p>
-                <p> You can find that when a request fail, it triggers automatically another one.</p>                                                       
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+                <img src="images/portfolio/java.png" class="img-responsive img-centered" alt="java">
+        </div>
+        <div class="col-sm-3">
+                <img src="images/portfolio/spring.png" class="img-responsive img-centered" alt="spring">
+        </div>
+        <div class="col-sm-2">
+                <img src="images/portfolio/csharp.png" class="img-responsive img-centered" alt="c#">
+        </div>
+        <div class="col-sm-2">
+                <img src="images/portfolio/nancy.png" class="img-responsive img-centered" alt="nancy Fx">
+        </div>
+        <div class="col-sm-2">
+                <img src="images/portfolio/fsharp.png" class="img-responsive img-centered" alt="F#">
+        </div>
+        
+    </div>
+    <div class="row">    
+        <div class="col-sm-4">
+                <img src="images/portfolio/python.png" class="img-responsive img-centered" alt="python">
+        </div>
+        <div class="col-sm-2">
+                <img src="images/portfolio/flask.png" class="img-responsive img-centered" alt="flask">
+        </div>
+        <div class="col-sm-3">
+                <img src="images/portfolio/node.png" class="img-responsive img-centered" alt="node js">
+        </div>
+        <div class="col-sm-2">
+                <img src="images/portfolio/suave.png" class="img-responsive img-centered" alt="Suave">
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-lg-12">            
+            <p>In this example I have 5 services written in different technologies (Java, C#, F#, Javascript, Python). 
+                Each microservices has the same contract are all of them are under the same load balancer. </p>
+            <p>The angular application is making a call to the loadbalancer, binding to the view and showing the result.</p>
+            <p>You can see that when a return is given, there is also a from field. That indicates where the response is coming back (c#, java, python, nodejs, f#.)</p>
+        </div>
+    </div>
+     <div class="row">
+       
+        <div class="col-xs-10 col-xs-offset-1 form-group">   
+             <form ng-submit="submit()" class="form-inline">
+                <label class="sr-only" for="number1">Number 1</label>
+                <input type="text" class="form-control" id="number1" placeholder="Number 1" ng-model="num1">
+                <span class="glyphicon glyphicon-plus">&nbsp;</span>
+                <label class="sr-only" for="number2">Number 2</label>
+                <input type="text" class="form-control" id="number2" placeholder="Number 2" ng-model="num2">
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </form>
+        </div>        
+        
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-xs-offset-3 bg-info" ng-model="result">Result : {{ result }}</div>
+        <div class="col-xs-3 bg-info" ng-model="from">From : {{ from }}</div>
     </div>
 </div>
