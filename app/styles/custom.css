@@ -9,6 +9,7 @@
 .result, .from {
     color: #fff;
     background: #726A95;
+    padding: 15px;
 }
 header .intro-text .mission {
   display: block;
